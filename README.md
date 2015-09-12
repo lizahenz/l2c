@@ -19,6 +19,13 @@ One of the outcomes of the in-person workshop will be an introduction to a proje
 
 Ideally, I'd like to have a short once a week meeting via google hangout to allow people to quickly tell others what they're working on, whether they need help with anything and communicate any other issues they are having.  Also, for those who have time, I can do a bit of teaching remotely. If we can't find a mutually agreeable time, we may just need to do this more adhoc. The majority of communication should be through the slack channel and comments on code during code review, but it's still just nice sometimes to be able to talk rather than type about things.  
 
+## A note on conventions
+
+Text that is in a code block:
+```
+like this
+```
+is typically code and meant to be run in some environment. If there is no other context, then its probably meant to be run from the terminal.
 
 ## Getting Started Instructions
 
@@ -42,23 +49,39 @@ Ideally, I'd like to have a short once a week meeting via google hangout to allo
 
   There are many choices, so if you don't like something that you try, its totally fine to try another.
 
++ Install Xcode from the app store (you'll need the developer tools)
+
+## Assignment -1
+
+Get some familiarity with the command line. I've done much of this tutorial before:
+
+[command line the hard way](http://cli.learncodethehardway.org/book/)
+
+So i'd recommend starting with that and asking any questions you may have in Slack.  Googling will likely provide other resources, with keywords like *command line* or *cli* (command line interface) or perhaps even terminal.
+
+
 ## Assignment 0
+Note: this may require a command line tutorial before completing...so if it is too arcane...don't stress it at the moment. (added Assignment -1 above)
+
+
   Submit a Pull Request to this Repository that adds your name to the roster.txt file
 
-  First, fork the repository by clicking on the fork button in the upper right hand side of this screen. Then clone your fork with:
+  First, fork the repository by clicking on the fork button in the upper right hand side of this screen. Then clone your fork with the following command in the terminal (you can do this in your home directory which is the default when you open the terminal, or you can make a new directory to put it in):
 ``` 
   git clone https://github.com/[your_user_name]/l2c.git
 ```
+  What this does is copy the code from github to your computer. Then you can edit it locally, make changes and then add those changes back into the repository.
+
   Then in the directory on your local machine, edit the roster.txt file to include your name. Then in the command line:
 ```
   git add .
   git commit
 ```
-Then hit i to go into insert mode (this will give you a taste of vim to see whether or not you want to dive into it) and type a message.  This should simply describe whatever change you are making. You can save and quit this file by typing ```:wq```  After this you can push your changes back with
+Then hit i to go into insert mode (this will give you a taste of vim to see whether or not you want to dive into it) and type a message.  This should simply describe whatever change you are making. Then hit esc to exit insert mode. You can save and quit this file by typing ```:wq```  After this you can push your changes back with
 ```
   git push
 ```
-If all has gone well, you can go back to the web page for this repo that is under my name and not your fork. And click on the green button with arrows in it.  This will bring up a pull request form and you can provide any additional comments. Fill out the form to submit a pull request.  In the comments, tag me with @nathanlubchenco so that I'll get emailed about it.  Then I can review it and merge the change in.
+If all has gone well, you can go back to the web page for this repo this is your fork. And click on the green button with arrows in it.  This will bring up a pull request form and you can provide any additional comments. Fill out the form to submit a pull request.  In the comments, tag me with @nathanlubchenco so that I'll get emailed about it.  Then I can review it and merge the change in.
 
 If you get stuck, please ask for help from myself or someone else that has succesfully done this.  The list of people who have succeeded will be apparent from the contents of the roster.txt file.
 

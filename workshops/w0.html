@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <title>L2C WorkShop</title>
     <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -21,22 +21,316 @@
 
 class: center, middle
 
-# Title
+# Learn to Code Workshop 
 
 ---
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
+1. Introduction 
+2. The Command Line 
+3. Version Control - Git / Github 
+4. Language of the Internet: Http / JSON / REST APIs 
+5. Project Management: Jira / Scrum / Agile
+6. Python Data Structures 
+7. Coding 
 
 ---
 
 # Introduction
 
+---
+
+# The Command Line 
+
+## Grammar and Syntax
+
+```bash
+verb -adjective -adjective noun noun
+```
+
+Adjectives are typically optional
+
+First noun is generally the source of a command
+Second noun is usually the target of a command
+
+Sometimes you only use verbs, or one noun, it varies.
+
+---
+
+# The Command Line 
+
+## Basic
+
+
+```bash
+cd /absolute/path/you/want 
+cd relative/path/you/want
+```
+-- change directory  
+
+```bash
+ls
+ls path/you/want
+```
+-- look stuff?
+
+```bash
+man cd
+man ls
+```
+-- manual / help
+
+```bash
+pwd
+```
+-- present working directory
+
+---
+
+# The Command Line 
+
+## Basic II
+
+```bash
+mkdir new_folder
+mkdir much_cooler_name_than_new_folder
+```
+-- make directory
+```bash
+rm stupid_file_i_dont_need_anymore 
+```
+-- remove something
+```bash
+wc
+```
+-- word count 
+```bash
+head
+```
+-- print first bit of something 
+
+---
+
+# The Command Line 
+
+## Basic III
+
+```bash
+tail
+```
+-- print last bit of something 
+
+```bash
+cp
+```
+-- copy something 
+
+```bash
+mv
+```
+-- move something 
+
+---
+# The Command Line
+## Intermediate
+
+```bash
+grep -r 'text you need  to find' .
+```
+-- search for text
+
+The pipe operator 
+```bash
+|
+```
+allows you to chain commands together, to pipe the output of one command to another
+
+```bash
+ls file_location | wc -l
+grep -r '2015-08-24' . | head
+```
+
+```bash
+sudo mdkir /some/root/level/permissions/directory
+sudo su
+```
+-- run as a command as super user or become super user
+
+---
+
+# Version Control 
+
+Workflow
+```bash
+git pull
+```
+Get most up to date version of the code
+Then make changes to the code that you want to 
+
+```bash
+git status
+git add .
+git commit
+git push
+```
+
+Submit Pull Request
+Tag your reviewer with @their_github_handle
+
+---
+# Interactive Session I
+
++ Make a directory in your user home /Users/[your_username] called workspace or something similar
++ cd into this directory
++ use pwd to output the location you're in
+
++ use git clone to clone a fork of the l2c repository into this location
++ edit the roster.txt file to include your name
++ check the git status
++ add these changes
++ commit these changes
++ push these changes
+
++ submit a pull request
+
++ help others when you're done and your PR has been merged
+
+---
+# Interactive Session I
+
+Answer these questions programatically:
+
+How many lines (presumably each line is a person) are in the roster.txt file?
+
+What are the names of all the people who have an 'n' in their name in the roster.txt file?
+
+Does the python directory make use of a libarary called pandas?
+
+
+---
+# Language of the Internet 
+## JSON (Javascript Object Notation)
+
+```json
+  {
+  "name" : "Nathan",
+  "age"  : 33,
+  "favorite_color" : "blue, no green...ahhhhh"
+  }
+```
+
+Or more generically:
+```json
+  {
+  "key" : "value",
+  "key2"  : "value2"
+  }
+```
+
+---
+# Language of the Internet 
+## JSON - default data structure of the internet 
+
+Also supports deep nested structures:
+
+```json
+  {
+  "league" : "NFL",
+  "team"  : "Broncos",
+  "roster" : {
+              "QB" : [ "Peyton Manning", "Some other guy"],
+              "WR" : [ "Rod Smith", "Erik Decker", "Ed Macafree"] 
+              },
+  "ranking": 7
+  }
+```
+---
+# Language of the Internet 
+## RESTful API (Application Programming Interface)
+
+Base URL
+```http
+http://www.khanacademy.org/api/v1/
+```
++
+endpoint
+```http
+exercises
+```
+makes up and api call
+
+```http
+http://www.khanacademy.org/api/v1/exercises
+```
+
+save to a file with 
+```bash
+curl http://www.khanacademy.org/api/v1/exercises > exercises.json
+```
+
+Also can paste url in a browser
+
+---
+# Language of the Internet 
+## HTTP codes
+
+200s - Yay everything is good, successful call 
+400s - Something went wrong:
++ 403: Forbidden
++ 404: Not Found
+500s - Something went really really wrong (but in a different way), the server did not respond
+
+--- 
+# Language of the Internet
+
+Another useful tool - wget
+Downloads data at urls
+```bash
+wget url/you/want/to/download
+```
+
+---
+# Interactive Session II
+
+Make a couple curl request to an endpoing with an additional -v option
++ make one that you know should succeed and confirm that you got a 200 response
++ make one that you know should fail and see what sort of response you get
+
+Use wget to download a website and then insepct the contents of the file
+
+---
+
+# Jira / Scrum / Agile 
+
+Project Management
+
++ Tradeoffs
+
++ Vocabulary
+
+
+---
+
+# Interactive Session III
+
++ Grab a ticket in Jira (from the intro epic) 
++ assign it to yourself
++ move the ticket to in progress
++ write code that completes the acceptance criteria
++ commit your code, submit a PR, get someone to review your code
++ once your code is merged, move the ticket to done
+
+# Python Data Structures 
+
+---
+
+# Coding 
+
+
+
     </textarea>
-    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    <script src="assets/remark-latest.min.js">
     </script>
     <script>
       var slideshow = remark.create();
